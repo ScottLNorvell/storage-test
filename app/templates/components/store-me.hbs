@@ -1,8 +1,15 @@
-{{input value=valueA}}
+{{input value=valueA placeholder="↓ I need the button ↓"}}
 
 <br>
 
-<button {{action 'storeMe' 'valueA' valueA}}>^^^ STORE THIS ^^^</button>
+<button {{action 'storeMe' 'valueA' valueA}}>&uarr; STORE THIS &uarr;</button>
+
+<br>
+<br>
+
+{{input value=valueB key-up=(action 'storeMe' 'valueB' valueB) placeholder="I am auto stored!"}}
+
+
 
 <br><br><br>
 
@@ -10,4 +17,7 @@
 <ul>
   <li>valueA: {{valueA}}</li>
   <li>valueAStored: {{valueAStored}}</li>
+
+  <li>valueB: {{valueB}}</li>
+  <li>valueBStored: {{valueBStored}}</li>
 </ul>
